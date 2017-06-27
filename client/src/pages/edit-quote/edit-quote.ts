@@ -8,19 +8,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-edit-quote',
   templateUrl: 'edit-quote.html',
+  providers: [QuoteService ]
 })
 export class EditQuotePage {
 
   message: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, quoteService: QuoteService) {
-    quoteService.getQuote(navParams.get('quoteId')).subscribe(data => {
+    quoteService.getQuote(navParams.get('quoteId'))
+        .subscribe(data => {
         this.message = data.message;
     })
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EditQuotePage');
   }
 
 }

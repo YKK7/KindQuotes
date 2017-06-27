@@ -15,8 +15,9 @@ export class HomePage {
   quote = {
     message: ""
   }
+  editQuotePage = EditQuotePage;
 
-  constructor(public navCtrl: NavController, public quoteService : QuoteService ) {
+  constructor(public navCtrl: NavController, public quoteService : QuoteService) {
     this.getQuotes();
   }
 

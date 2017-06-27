@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Ionic Blank
     </ion-title>
@@ -12,13 +12,13 @@
     <ion-item>
       <ion-input type="text" placeholder="Enter a kind quote!" [(ngModel)]="quote.message" name="quote"></ion-input>
     </ion-item>
-    <button ion-button type="submit" block>Submit</button>
+    <button ion-button type="submit" block outline>Submit</button>
   </form>
 
   <ion-list>
     <ion-item-sliding *ngFor="let quote of quotes">
 
-      <button ion-item (click)="update(quote.id)">
+      <button ion-item text-wrap (click)="update(quote.id)">
         {{quote.message}}
       </button>
 
