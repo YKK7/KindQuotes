@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Kind Quotes
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -19,7 +19,7 @@
     <ion-item-sliding *ngFor="let quote of quotes">
 
       <button ion-item text-wrap (click)="update(quote.id)">
-        {{quote.message}}
+        <i>{{quote.message}}</i>
       </button>
 
       <ion-item-options>

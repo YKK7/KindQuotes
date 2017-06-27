@@ -28,4 +28,8 @@ export class QuoteService {
     getQuote(id: any):Observable<any>{
         return this._http.get("http://localhost:8080/quotes/" + id).map(response => response.json());
     }
+
+    update(quote: any):Observable<any>{
+        return this._http.put("http://localhost:8080/quotes/", quote).map(response => response.json());
+    }
 }

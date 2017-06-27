@@ -61,6 +61,7 @@ public class QuoteController {
     }
 
     @RequestMapping(method = RequestMethod.PUT)
+    @CrossOrigin("http://localhost:8100")
     public ResponseEntity<?> update(@RequestBody Quote quote){
         LOG.info("Updating quote: {}", quote);
         try {

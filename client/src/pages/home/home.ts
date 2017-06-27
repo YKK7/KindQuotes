@@ -51,5 +51,8 @@ export class HomePage {
     console.log(id + ' pushed');
   }
 
+  ionViewWillEnter(){
+    this.getQuotes();
+  }
 }
 

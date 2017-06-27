@@ -9,9 +9,15 @@
 
 <ion-content>
   <ion-card padding>
-    <h1>{{message}}</h1>
+    <h1><b><i>{{quote.message}}</i></b></h1>
   </ion-card>
-  <ion-item>
-    <ion-input type="text" placeholder="Enter New Quote"></ion-input>
-  </ion-item>
+ <form (ngSubmit)="editQuote()">
+    <ion-item>
+      <ion-input type="text" placeholder="Enter New Quote" [(ngModel)]="quote.message" name="quote"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Submit</button>
+  </form>
 </ion-content>
+
+
+
